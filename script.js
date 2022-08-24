@@ -21,11 +21,10 @@ function lampOff () {
 
 function lampBroken () {
   lamp.src = 'img/quebrada.jpg';
-  setInterval(function(){
+  const Timer = setInterval(function(){
     alert('Lampada quebrou, Favor Reiniciar a Página');
-  }, 5000); 
-  
-  
+    clearInterval(Timer);
+  }, 2000); 
 }
 
 turnOn.addEventListener('click', lampOn);
